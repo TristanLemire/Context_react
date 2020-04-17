@@ -2,16 +2,11 @@ import React from 'react';
 import isAuthContext from './IsAuthContext';
 
 export default () => {
+    const { isAuth} = React.useContext( isAuthContext );
     return(
-       <isAuthContext.Consumer>
-           {
-               value => 
-               (
-                   <div>
-                       { value.isAuth ? "connecter" : "non connecter"}
-                   </div>
-               )
-           }
-       </isAuthContext.Consumer>
+        <div>
+            { isAuth ? "connecter" : "non connecter"}
+            <button onClick={() => {isAuth = true}} >Connexion</button>
+        </div>
     )
 }
