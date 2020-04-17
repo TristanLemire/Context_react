@@ -1,10 +1,13 @@
 import React from 'react';
 import './App.css';
-import Home from './Home';
+import IsAuthContext from './IsAuthContext';
+import isAuthContext from './IsAuthContext';
 
 function App() {
   return (
-    <Home/>
+    <isAuthContext.Provider value="{ isAuth: false }">
+
+    </isAuthContext.Provider>
   );
 }
 
