@@ -4,8 +4,9 @@ import isAuthContext from './IsAuthContext';
 import Connexion from './Connexion';
 
 function App() {
+  const [ isAuth, setAuth] = React.useState(false)
   return (
-    <isAuthContext.Provider value="{ isAuth: false }">
+    <isAuthContext.Provider value={ {isAuth, setAuth} }>
       <Connexion/>
     </isAuthContext.Provider>
   );
