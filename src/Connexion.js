@@ -1,7 +1,10 @@
 import React from 'react';
-import IsAuthContext from './IsAuthContext';
-export default () => (
-      <IsAuthContext.Consumer>
-          coucou
-      </IsAuthContext.Consumer>
-);
+import Login from 'Login';
+export default () => {
+    return(
+        <>
+            <h1>Connexion</h1>
+            <Login/>
+        </>
+    )
+}

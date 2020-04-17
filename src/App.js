@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import IsAuthContext from './IsAuthContext';
 import isAuthContext from './IsAuthContext';
+import Connexion from './Connexion';
 
 function App() {
   return (
     <isAuthContext.Provider value="{ isAuth: false }">
-
+      <Connexion/>
     </isAuthContext.Provider>
   );
 }
